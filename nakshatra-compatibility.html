@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birth Star (Nakshatra) Compatibility: Traditional Foundation - Kalyan Sutra</title>
+  <meta name="description" content="Explore how birth star (Nakshatra) compatibility forms the primary foundation for analyzing astrological harmony in South Indian marriages.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="index.css?v=1.0.1">
+  <!-- Client-side PDF Generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+  <!-- Custom Alert Toast Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Glassmorphism Navigation Bar -->
+  <header class="navbar-header" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo-link">
+        <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Traditional Lamp / Lotus Motif -->
+          <path d="M50 15C50 15 35 38 35 52C35 60.2843 41.7157 67 50 67C58.2843 67 65 60.2843 65 52C65 38 50 15 50 15Z" fill="url(#gold-gradient)" />
+          <path d="M50 8C50 8 31 32 31 50C31 60.4934 39.5066 69 50 69C60.4934 69 69 60.4934 69 50C69 32 50 8 50 8ZM50 64C42.268 64 36 57.732 36 50C36 39.2 46.8 20.4 50 15.2C53.2 20.4 64 39.2 64 50C64 57.732 57.732 64 50 64Z" fill="url(#gold-gradient-2)" />
+          <circle cx="50" cy="80" r="4" fill="#D4AF37" />
+          <path d="M30 80H70" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
+          <path d="M40 85H60" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
+          <defs>
+            <linearGradient id="gold-gradient" x1="35" y1="15" x2="65" y2="67" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#F3E5AB" />
+              <stop offset="50%" stop-color="#D4AF37" />
+              <stop offset="100%" stop-color="#AA7C11" />
+            </linearGradient>
+            <linearGradient id="gold-gradient-2" x1="31" y1="8" x2="69" y2="69" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#FFF" stop-opacity="0.8"/>
+              <stop offset="100%" stop-color="#D4AF37" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-title">Kalyan Sutra</span>
+          <span class="logo-subtitle">South India's Wedding Journal</span>
+        </div>
+      </a>
+
+      <!-- Desktop Menu Links -->
+      <nav class="nav-links">
+        <a href="index.html#hero" class="nav-item">Home</a>
+        <a href="index.html#traditions" class="nav-item">Traditions</a>
+        <a href="index.html#horoscope" class="nav-item">Horoscope Matching</a>
+        <a href="index.html#success-stories" class="nav-item">Success Stories</a>
+        <a href="journals.html" class="nav-item">Journals</a>
+      </nav>
+
+      <!-- Nav actions -->
+      <div class="nav-actions">
+        <!-- Search bar toggle widget -->
+        <div class="search-widget">
+          <button class="search-toggle-btn" aria-label="Search" id="search-toggle">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+          <div class="search-input-container" id="search-box">
+            <input type="text" id="nav-search-input" placeholder="Search articles, customs...">
+          </div>
+        </div>
+
+        <button class="theme-toggle" id="theme-switcher" title="Toggle Theme" style="display: none;">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+          </svg>
+        </button>
+
+        <a href="https://www.kalyanmatrimony.com/" target="_blank" class="btn-subscribe">Find Your Match</a>
+
+        <!-- Mobile menu burger -->
+        <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Menu -->
+    <div class="mobile-nav" id="mobile-menu">
+      <div class="mobile-search-wrapper">
+        <input type="text" id="mobile-search-input" placeholder="Search articles, customs...">
+        <svg class="mobile-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </div>
+      <a href="index.html#hero" class="mobile-nav-item">Home</a>
+      <a href="index.html#traditions" class="mobile-nav-item">Traditions</a>
+      <a href="index.html#horoscope" class="mobile-nav-item">Horoscope Matching</a>
+      <a href="index.html#success-stories" class="mobile-nav-item">Success Stories</a>
+      <a href="journals.html" class="mobile-nav-item">Journals</a>
+      <a href="https://www.kalyanmatrimony.com/" target="_blank" class="mobile-nav-btn">Find Your Match</a>
+    </div>
+  </header>
+
+  <!-- Main Article Layout -->
+  <main class="article-layout-container">
+    <!-- Breadcrumbs -->
+    <nav class="article-breadcrumb animate-fade-in animate-stagger-1">
+      <a href="index.html">Home</a> &gt; <a href="compatibility-hub.html">Compatibility Hub</a> &gt; <span>Nakshatra Compatibility</span>
+    </nav>
+
+    <div class="two-column-layout">
+      <!-- Left Column: Article Body -->
+      <article class="main-content-column">
+        <div class="article-paper-card animate-fade-in animate-stagger-2">
+          <!-- Category Tag -->
+          <span class="article-category-tag animate-fade-in animate-stagger-3">Compatibility Hub</span>
+
+          <!-- H1 Header -->
+          <h1 class="article-header-title animate-fade-in animate-stagger-4">Birth Star (Nakshatra) Compatibility: The Traditional Foundation of Marriage Harmony</h1>
+
+          <!-- Meta details -->
+          <div class="article-meta-row animate-fade-in animate-stagger-5">
+            <span>By <strong>N. Geethanjali</strong></span>
+            <span class="meta-divider">|</span>
+            <span>5 Min Read</span>
+            <span class="meta-divider">&bull;</span>
+            <span>June 22, 2026</span>
+          </div>
+
+          <!-- Cover Image -->
+          <div class="article-image-box animate-fade-in animate-stagger-6">
+            <img src="vedic_astrology.png" alt="Vedic birth star astrology">
+            <div class="article-image-caption">Celestial Blueprints: Understanding how birth stars influence relationships and emotional harmony.</div>
+          </div>
+
+          <!-- Body Text -->
+          <div class="article-body-text">
+            <p><span class="dropcap">U</span>nder the Vedic system, an individual's birth star (Nakshatra)—determined by the position of the Moon at birth—exerts a powerful influence on their personality, instincts, and behavior. Thus, Nakshatra compatibility forms the primary foundation for analyzing astrological harmony between a bride and groom.</p>
+
+            <p>In South Indian weddings, checking the birth stars is the very first step in the alliance process. There are 27 Nakshatras in Vedic astrology, each divided into four quarters (Padas). Understanding how your birth star interacts with a prospective partner's star can provide valuable insights into your relationship dynamics.</p>
+
+            <blockquote class="article-pullquote">
+              "The stars under which we are born do not dictate our fate, but they outline our energetic qualities. Understanding Nakshatra compatibility allows couples to navigate differences with empathy and maturity."
+            </blockquote>
+
+            <h2>Energetic Classifications (Ganas) of Stars</h2>
+            <p>The 27 Nakshatras are grouped into three primary classifications (Ganas) that define an individual's basic temperament:</p>
+            <ul>
+              <li><strong>Deva Gana (Divine):</strong> Characters born under these stars are traditionally seen as gentle, empathetic, and peaceful.</li>
+              <li><strong>Manushya Gana (Human):</strong> Represents practical, ambitious, and family-oriented temperaments.</li>
+              <li><strong>Rakshasa Gana (Assertive/Demonic):</strong> Indicates strong-willed, intuitive, and highly independent personalities.</li>
+            </ul>
+            <p>Astrological matching seeks a balance between these Ganas. For example, a Deva and Rakshasa match may require additional planetary remedies, while two Deva or Manushya stars naturally share similar life paces.</p>
+
+            <h2>Yoni Porutham and Physical Harmony</h2>
+            <p>Each birth star is also associated with a specific animal symbol (Yoni). Evaluating Yoni compatibility determines the physical and emotional harmony between the couple, ensuring a balanced, loving physical connection in marriage.</p>
+
+            <h2>Practical Application of Star Matching</h2>
+            <p>While star compatibility provides a traditional template, modern matching platforms like Kalyan Matrimony combine these checks with personality filters. This ensures that couples benefit from both ancient astrological heritage and practical alignment in career and personal goals, creating a strong foundation for a happy, stable life together.</p>
+          </div>
+
+          <!-- Kalyan Matrimony Inline CTA -->
+          <div class="article-matrimony-cta">
+            <h3>Begin Your Blessed Journey to Marriage</h3>
+            <p>Join India's most trusted South Indian matchmaking service. Register free, search thousands of verified profiles, match horoscopes, and find your perfect life partner today.</p>
+            <a href="https://www.kalyanmatrimony.com/" target="_blank" class="btn-primary">Find Your Match</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Right Column: Sidebar -->
+      <aside class="sidebar-column">
+        <!-- Live Interactive Checklist Widget -->
+        <div class="sidebar-widget checklist-widget">
+          <h4>Your Wedding Planning Tracker</h4>
+          <p>Cross off key tasks to track your wedding preparation progress.</p>
+          
+          <div class="checklist-image-wrapper">
+            <img id="checklist-category-image" src="inspiration_decor.png" alt="Marriage checklist representation" class="checklist-category-image">
+          </div>
+
+          <div class="checklist-selector-wrapper">
+            <select id="checklist-category-select" onchange="switchChecklistCategory(this.value)">
+              <option value="marriage">Marriage Checklist (General)</option>
+              <option value="bride">Bride's Checklist</option>
+              <option value="groom">Groom's Checklist</option>
+            </select>
+          </div>
+
+          <div class="progress-container">
+            <div class="progress-bar" id="checklist-progress" style="width: 20%;"></div>
+          </div>
+          <span class="progress-text" id="checklist-progress-text">2 of 10 tasks completed</span>
+          
+          <ul class="checklist-items" id="checklist-items-list">
+            <!-- Rendered dynamically via JS -->
+          </ul>
+          <button class="btn-sidebar-download" onclick="downloadChecklist()">Download Full Checklist PDF</button>
+        </div>
+
+        <!-- Kalyan Matrimony Sidebar CTA Widget -->
+        <div class="sidebar-widget kalyan-sidebar-cta-widget">
+          <h4>Find Your Match</h4>
+          <p>Join India's most trusted South Indian matchmaking service from Kalyan Jewellers.</p>
+          <div class="sidebar-cta-features">
+            <span class="feature-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; color: var(--gold-main);">
+                <rect x="5" y="2" width="14" height="20" rx="3" />
+                <line x1="10" y1="5" x2="14" y2="5" />
+                <circle cx="12" cy="19" r="1" />
+                <path d="M9 11l2 2 4-4" />
+              </svg>
+              100% Phone Verified Profiles
+            </span>
+            <span class="feature-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; color: var(--gold-main);">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="M12 8a2 2 0 0 0-2 2v2h4v-2a2 2 0 0 0-2-2z" />
+                <rect x="9" y="12" width="6" height="5" rx="1" />
+                <circle cx="12" cy="14.5" r="1" fill="currentColor" />
+              </svg>
+              Strict Privacy Controls
+            </span>
+            <span class="feature-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; color: var(--gold-main);">
+                <path d="M12 5.5C10.5 3.5 6 3.5 4 6c-2.5 3 0 7.5 8 13.5 8-6 10.5-10.5 8-13.5-2-2.5-6.5-2.5-8-.5z" />
+              </svg>
+              Highly Compatible Matches
+            </span>
+          </div>
+          <a href="https://www.kalyanmatrimony.com/" target="_blank" class="btn-sidebar-cta">Register Free Now</a>
+        </div>
+
+        <!-- Popular Categories Tags -->
+        <div class="sidebar-widget categories-widget">
+          <h4>Popular Topics</h4>
+          <div class="categories-tag-list">
+            <button class="tag-link" onclick="location.href='index.html#latest-articles'">All Topics</button>
+            <button class="tag-link" onclick="location.href='finding-your-match.html'">Finding Your Match</button>
+            <button class="tag-link active" onclick="location.href='compatibility-hub.html'">Compatibility Hub</button>
+            <button class="tag-link" onclick="location.href='success-stories-archive.html'">Success Stories</button>
+            <button class="tag-link" onclick="location.href='family-perspectives.html'">Family Perspectives</button>
+            <button class="tag-link" onclick="location.href='wedding-traditions.html'">Wedding Traditions</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="footer-kolam-pattern"></div>
+    <div class="footer-container">
+      <div class="footer-top-grid">
+        <div class="footer-info-col">
+          <div class="footer-logo">
+            <span class="logo-title text-light">Kalyan Sutra</span>
+            <span class="logo-subtitle text-light">South India's Wedding Journal</span>
+          </div>
+          <p>Blending contemporary digital matrimonial convenience with sacred traditional South Indian cultural practices. An editorial platform for modern families.</p>
+          <div class="social-links-list">
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" aria-label="Pinterest">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 22s1-2 1.4-3.6c.1-.4-.6-1-.9-2.5-1-4.2 1.8-9 6.5-9 4.3 0 7 3.2 7 7.2 0 5-2.7 8.3-6 8.3-1.2 0-2.3-.7-2-2 .4-1.6 1.1-4.2 1.1-5.6 0-1.3-.7-2.4-2.2-2.4-1.8 0-3.2 1.8-3.2 4.3 0 1.5.5 2.5.5 2.5s-1.8 7.3-2.2 9c0 0-.2.6-.2.1z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h5>Blog Categories</h5>
+          <ul>
+            <li><a href="finding-your-match.html">Finding Your Match</a></li>
+            <li><a href="compatibility-hub.html">Compatibility Hub</a></li>
+            <li><a href="success-stories-archive.html">Success Stories</a></li>
+            <li><a href="family-perspectives.html">Family Perspectives</a></li>
+            <li><a href="wedding-traditions.html">Wedding Traditions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h5>Matrimony Services</h5>
+          <ul>
+            <li><a href="index.html#kalyan-cta">Register Profile</a></li>
+            <li><a href="https://www.kalyanmatrimony.com/" target="_blank">Search Matches</a></li>
+            <li><a href="index.html#horoscope">Vedic Horoscope Matching</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h5>Contact & Trust</h5>
+          <ul>
+            <li><a href="about.html">About Kalyan Sutra</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="editorial.html">Editorial Guidelines</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div class="trust-badges-container">
+          <div class="trust-badge-item">
+            <span class="trust-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="M9 11l2 2 4-4" />
+              </svg>
+            </span>
+            <span class="trust-badge-text">100% Mobile Verified</span>
+          </div>
+          <div class="trust-badge-item">
+            <span class="trust-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+            </span>
+            <span class="trust-badge-text">Privacy and Security</span>
+          </div>
+          <div class="trust-badge-item">
+            <span class="trust-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="7" />
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                <line x1="12" y1="5" x2="12" y2="11" />
+                <line x1="9" y1="8" x2="15" y2="8" />
+              </svg>
+            </span>
+            <span class="trust-badge-text">From the Trusted Brand Kalyan Jewellers</span>
+          </div>
+        </div>
+        <p class="copyright-text">&copy; 2026 Kalyan Matrimony Platform. All Rights Reserved. Designed with cultural love and elegance.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom Javascript -->
+  <script src="index.js"></script>
+</body>
+</html>

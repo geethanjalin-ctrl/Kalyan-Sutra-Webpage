@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understanding the Kasi Yatra: Why the Groom Plays Hard to Get - Kalyan Sutra</title>
+  <meta name="description" content="Exploring the humorous and cultural significance of the Kasi Yatra ritual in Tamil Brahmin weddings. Learn how this tradition balances study and family life.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght=0,300;0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="index.css?v=1.0.1">
+  <!-- Client-side PDF Generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+  <!-- Custom Alert Toast Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Glassmorphism Navigation Bar -->
+  <header class="navbar-header" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo-link">
+        <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Traditional Lamp / Lotus Motif -->
+          <path d="M50 15C50 15 35 38 35 52C35 60.2843 41.7157 67 50 67C58.2843 67 65 60.2843 65 52C65 38 50 15 50 15Z" fill="url(#gold-gradient)" />
+          <path d="M50 8C50 8 31 32 31 50C31 60.4934 39.5066 69 50 69C60.4934 69 69 60.4934 69 50+C69 32 50 8 50 8ZM50 64C42.268 64 36 57.732 36 50C36 39.2 46.8 20.4 50 15.2C53.2 20.4 64 39.2 64 50C64 57.732 57.732 64 50 64Z" fill="url(#gold-gradient-2)" />
+          <circle cx="50" cy="80" r="4" fill="#D4AF37" />
+          <path d="M30 80H70" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
+          <path d="M40 85H60" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
+          <defs>
+            <linearGradient id="gold-gradient" x1="35" y1="15" x2="65" y2="67" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#F3E5AB" />
+              <stop offset="50%" stop-color="#D4AF37" />
+              <stop offset="100%" stop-color="#AA7C11" />
+            </linearGradient>
+            <linearGradient id="gold-gradient-2" x1="31" y1="8" x2="69" y2="69" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#FFF" stop-opacity="0.8"/>
+              <stop offset="100%" stop-color="#D4AF37" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-title">Kalyan Sutra</span>
+          <span class="logo-subtitle">South India's Wedding Journal</span>
+        </div>
+      </a>
+
+      <!-- Desktop Menu Links -->
+      <nav class="nav-links">
+        <a href="index.html#hero" class="nav-item">Home</a>
+        <a href="index.html#traditions" class="nav-item">Traditions</a>
+        <a href="index.html#horoscope" class="nav-item">Horoscope Matching</a>
+        <a href="index.html#success-stories" class="nav-item">Success Stories</a>
+        <a href="journals.html" class="nav-item">Journals</a>
+      </nav>
+
+      <!-- Nav actions -->
+      <div class="nav-actions">
+        <!-- Search bar toggle widget -->
+        <div class="search-widget">
+          <button class="search-toggle-btn" aria-label="Search" id="search-toggle">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+          <div class="search-input-container" id="search-box">
+            <input type="text" id="nav-search-input" placeholder="Search articles, customs...">
+          </div>
+        </div>
+
+        <button class="theme-toggle" id="theme-switcher" title="Toggle Theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+          </svg>
+        </button>
+
+        <a href="https://www.kalyanmatrimony.com/" target="_blank" class="btn-subscribe">Find Your Match</a>
+
+        <!-- Mobile menu burger -->
+        <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Menu -->
+    <div class="mobile-nav" id="mobile-menu">
+      <div class="mobile-search-wrapper">
+        <input type="text" id="mobile-search-input" placeholder="Search articles, customs...">
+        <svg class="mobile-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </div>
+      <a href="index.html#hero" class="mobile-nav-item">Home</a>
+      <a href="index.html#traditions" class="mobile-nav-item">Traditions</a>
+      <a href="index.html#horoscope" class="mobile-nav-item">Horoscope Matching</a>
+      <a href="index.html#success-stories" class="mobile-nav-item">Success Stories</a>
+      <a href="journals.html" class="mobile-nav-item">Journals</a>
+      <a href="https://www.kalyanmatrimony.com/" target="_blank" class="mobile-nav-btn">Find Your Match</a>
+    </div>
+  </header>
+
+  <!-- Main Article Layout -->
+  <main class="article-layout-container">
+    <!-- Breadcrumbs -->
+    <nav class="article-breadcrumb animate-fade-in animate-stagger-1">
+      <a href="index.html">Home</a> &gt; <a href="journals.html">Journals</a> &gt; <span>Kasi Yatra</span>
+    </nav>
+
+    <div class="two-column-layout">
+      <!-- Left Column: Article Body -->
+      <article class="main-content-column">
+        <div class="article-paper-card animate-fade-in animate-stagger-2">
+          <!-- Category Tag -->
+          <span class="article-category-tag animate-fade-in animate-stagger-3">Marriage Traditions</span>
+
+          <!-- H1 Header -->
+          <h1 class="article-header-title animate-fade-in animate-stagger-4">Understanding the Kasi Yatra: Why the Groom Plays Hard to Get</h1>
+
+          <!-- Meta details -->
+          <div class="article-meta-row animate-fade-in animate-stagger-5">
+            <span>By <strong>Pandit Shastri</strong></span>
+            <span class="meta-divider">|</span>
+            <span>5 Min Read</span>
+            <span class="meta-divider">&bull;</span>
+            <span>June 05, 2026</span>
+          </div>
+
+          <!-- Cover Image -->
+          <div class="article-image-box animate-fade-in animate-stagger-6">
+            <img src="KasiYatra_Cover.png" alt="Traditional South Indian Wedding Stage Decor Setup">
+            <div class="article-image-caption">Sacred Ground: A beautiful South Indian wedding Mandapam adorned with fresh jasmine garlands and brass lamps.</div>
+          </div>
+
+          <!-- Body Text -->
+          <div class="article-body-text">
+            <p><span class="dropcap">A</span>s the sun rises on the morning of a traditional Tamil wedding, a peculiar sight unfolds. The groom, dressed in a simple white dhoti and holding a decorated umbrella, a hand-fan, and a walking stick, begins walking away from the wedding hall. He announces his intention to renounce worldly pleasures and embark on a pilgrimage to Kasi (Varanasi) to pursue a life of ascetic study and spiritual contemplation.</p>
+
+            <p>But his journey is short-lived. Before he can exit the compound, the bride’s father intervenes. Holding the groom's hand, the father pleads with him to reconsider, offering the hand of his daughter and describing the joys, virtues, and spiritual fulfillment of householder life (Grihastha). After a brief, playful debate, the groom relents, accepts the proposal, and returns to the wedding hall to begin the marriage ceremonies.</p>
+
+            <p>This is the <strong>Kasi Yatra</strong>, one of the most beloved and lighthearted rituals of a South Indian wedding. Behind the laughter, however, lies a deep philosophical tradition that has shaped South Indian family values for generations.</p>
+
+           
+            <div class="article-inline-image">
+              <img src="KasiYatra1.png" alt="Kasi Yatra Ritual: Groom walking away with umbrella and walking stick, bride's father pleading">
+              <div class="article-image-caption">Kasi Yatra Ritual: Groom walking away with umbrella and walking stick, bride's father pleading</div>
+            </div>
+
+            <h2>The Spiritual Crossroads: Brahmacharya vs. Grihastha</h2>
+
+            <p>In Vedic tradition, a person’s life is divided into four stages (Ashramas): Brahmacharya (student life), Grihastha (householder life), Vanaprastha (retirement), and Sannyasa (renunciation). Historically, a young scholar finishing his studies might feel drawn directly to asceticism, skipping family life altogether in his pursuit of ultimate spiritual truth.</p>
+
+            <p>The Kasi Yatra dramatizes this critical spiritual crossroads. The groom's "pilgrimage" represents his desire to remain a student of scriptures, seeking solitude and higher learning in Varanasi. By stopping him, the bride's father reminds him that the householder stage is equally sacred. It is within Grihastha that one learns to support society, raise children, practice charity, and experience the divine through partnership.</p>
+              <blockquote class="article-pullquote">
+              "The Kasi Yatra is not just a playful game of chase. It is a symbolic bridge between the quest for knowledge and the embrace of companionate love."
+            </blockquote>
+            <h2>The Symbolic Travel Kit</h2>
+             <div class="article-inline-image">
+              <img src="KasiYatra3.png" alt="Kasi Yatra Ritual: Traditional travel and ritual items carried by the groom">
+              <div class="article-image-caption">Kasi Yatra Ritual: Traditional travel and ritual items</div>
+            </div>
+            <p>Every item carried by the groom during this ritual holds a specific symbolic meaning:</p>
+            <ul>
+              <li><strong>The Umbrella:</strong> Historically used to protect travelers from the elements, it symbolizes protection and the shade of wisdom that guides a person through life's storms.</li>
+              <li><strong>The Walking Stick:</strong> A symbol of support, representing the discipline and structure required during a pilgrimage.</li>
+              <li><strong>The Hand-fan:</strong> Used to cool oneself, it represents the ability to keep one's mind calm and tranquil in the face of difficulties.</li>
+              <li><strong>The Geeta & Sandals:</strong> The holy book represents spiritual guidance, while the wooden sandals protect the feet on the path of truth.</li>
+            </ul>
+
+            
+
+            <h2>The Joyous Negotiation</h2>
+
+            <p>What makes the Kasi Yatra a highlight for wedding guests is the playful banter. The bride's father must use his wits, humor, and emotional appeal to convince the groom. He speaks of his daughter's virtues, her companionship, and how they will fulfill their worldly and spiritual duties together. The groom, in turn, pretends to be hesitant, asking tough questions about his future responsibilities.</p>
+
+            <p>When the groom finally accepts the father's hand and turns back, the crowd erupts in cheers. The ritual serves as a beautiful icebreaker, easing the tension of the wedding day and uniting both families through shared humor and celebration.</p>
+          
+            <div class="article-inline-image">
+              <img src="KasiYatra2.png" alt="Kasi Yatra Ritual: Groom returning to the wedding hall after accepting the bride's hand">
+              <div class="article-image-caption">Kasi Yatra Ritual: Groom returning to the wedding hall after accepting the bride's hand</div>
+            </div>
+            <h2>A Modern Perspective</h2>
+
+            <p>While modern South Indian weddings have evolved, the Kasi Yatra remains a treasured anchor. Today's grooms participate with a mix of reverence and playful performance, often striking theatrical poses for wedding photographers. It serves as a reminder that marriage is not a restriction of one's goals, but a collaborative journey where two individuals help each other grow, both materially and spiritually.</p>
+          </div>
+
+          <!-- Kalyan Matrimony Inline CTA -->
+          <div class="article-matrimony-cta">
+            <h3>Begin Your Blessed Journey to Marriage</h3>
+            <p>Join India's most trusted South Indian matchmaking service. Register free, search thousands of verified profiles, match horoscopes, and find your perfect life partner today.</p>
+            <a href="https://www.kalyanmatrimony.com/" target="_blank" class="btn-primary">Find Your Match</a>
+          </div>
+        </div>
+
+        <!-- Latest Articles Section (Duplicated from Homepage) -->
+        <div class="article-paper-card animate-fade-in animate-stagger-4" style="margin-top: 40px; padding: 30px;">
+          <div class="column-header" style="border-bottom: 1.5px solid var(--border-color); padding-bottom: 10px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+            <h3 style="font-family: var(--font-serif); font-size: 1.75rem; color: var(--gold-main); font-weight: 700; margin: 0;">Latest Articles</h3>
+            <!-- Inline Search widget -->
+            <div class="feed-filter-controls">
+              <input type="text" id="feed-search-input" placeholder="Search within feed..." style="padding: 8px 12px; background-color: var(--bg-primary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); color: var(--text-primary); font-family: var(--font-sans); font-size: 0.85rem; outline: none; transition: border-color 0.3s ease;">
+            </div>
+          </div>
+
+          <div class="articles-feed" id="articles-feed">
+            <!-- Article Feed Item 1 -->
+            <article class="feed-item" data-category="traditions" data-keywords="kanjeevaram silk saree color motif weave dress bride fashion">
+              <div class="feed-img-holder" style="background-image: url('inspiration_saree.png');"></div>
+              <div class="feed-content">
+                <span class="feed-cat">Marriage Traditions</span>
+                <h4 class="feed-title"><a href="kanjeevaram-article.html" class="hover-underline">The Sacred Kanjeevaram: Deciphering the Weaves & Colors of South Indian Brides</a></h4>
+                <p class="feed-excerpt">Dive deep into the rich history of Kanjeevaram silk sarees. Learn about the significance of traditional colors like Kumkum red, temple gold, and peacock blue, and how modern brides are blending family heirlooms with contemporary styles.</p>
+                <div class="feed-meta">
+                  <span>N. Geethanjali</span> &bull; <span>June 14, 2026</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Article Feed Item 2 -->
+            <article class="feed-item" data-category="planning" data-keywords="catering sadhya menu food guests kalyanam feast banana leaf payasam">
+              <div class="feed-img-holder" style="background-image: url('sadhya_feast.png');"></div>
+              <div class="feed-content">
+                <span class="feed-cat">Wedding Planning</span>
+                <h4 class="feed-title"><a href="sadhya-feast.html" class="hover-underline">Sadhya Gastronomy: Designing the Ultimate Feast Menu</a></h4>
+                <p class="feed-excerpt">A culinary guide to organizing a traditional 28-course feast, choosing the right payasam combinations, and managing guest services gracefully.</p>
+                <div class="feed-meta">
+                  <span>Radhika Iyer</span> &bull; <span>June 03, 2026</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Article Feed Item 3 -->
+            <article class="feed-item" data-category="relationships" data-keywords="communication compatibility love advice trust distance virtual chat long distance">
+              <div class="feed-img-holder" style="background-image: url('couple1.png');"></div>
+              <div class="feed-content">
+                <span class="feed-cat">Family Relationships</span>
+                <h4 class="feed-title"><a href="building-trust.html" class="hover-underline">Building Trust Across Distances: Pre-marriage Communication Tips</a></h4>
+                <p class="feed-excerpt">For couples working in different cities before marriage, maintaining open dialogue and active listening is vital to lay a strong foundation.</p>
+                <div class="feed-meta">
+                  <span>Dr. Rajesh Krishnan</span> &bull; <span>May 28, 2026</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Article Feed Item 4 -->
+            <article class="feed-item" data-category="horoscope" data-keywords="nakshatra matching astrology matching score chevvai dosham manglik mars hurdle correction">
+              <div class="feed-img-holder" style="background-image: url('vedic_astrology.png');"></div>
+              <div class="feed-content">
+                <span class="feed-cat">Horoscope Matching</span>
+                <h4 class="feed-title"><a href="manglik-dosham.html" class="hover-underline">Manglik Dosh & Remedies: A Calm Perspective on Horoscope Hurdles</a></h4>
+                <p class="feed-excerpt">Addressing common myths and anxieties surrounding Chevvai Dosham (Mars affliction) in South Indian horoscopes and standard cultural remedies.</p>
+                <div class="feed-meta">
+                  <span>Pandit Shastri</span> &bull; <span>May 20, 2026</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </article>
+
+      <!-- Right Column: Sidebar -->
+      <aside class="sidebar-column">
+        <!-- Live Interactive Checklist Widget -->
+        <div class="sidebar-widget checklist-widget">
+          <h4>Your Wedding Planning Tracker</h4>
+          <p>Cross off key tasks to track your wedding preparation progress.</p>
+          
+          <div class="checklist-image-wrapper">
+            <img id="checklist-category-image" src="inspiration_decor.png" alt="Marriage checklist representation" class="checklist-category-image">
+          </div>
+
+          <div class="checklist-selector-wrapper">
+            <select id="checklist-category-select" onchange="switchChecklistCategory(this.value)">
+              <option value="marriage">Marriage Checklist (General)</option>
+              <option value="bride">Bride's Checklist</option>
+              <option value="groom">Groom's Checklist</option>
+            </select>
+          </div>
+
+          <div class="progress-container">
+            <div class="progress-bar" id="checklist-progress" style="width: 20%;"></div>
+          </div>
+          <span class="progress-text" id="checklist-progress-text">2 of 10 tasks completed</span>
+          
+          <ul class="checklist-items" id="checklist-items-list">
+            <!-- Rendered dynamically via JS -->
+          </ul>
+          <button class="btn-sidebar-download" onclick="downloadChecklist()">Download Full Checklist PDF</button>
+        </div>
+
+        <!-- Kalyan Matrimony Sidebar CTA Widget -->
+        <div class="sidebar-widget kalyan-sidebar-cta-widget">
+          <h4>Find Your Match</h4>
+          <p>Join India's most trusted South Indian matchmaking service from Kalyan Jewellers.</p>
+          <div class="sidebar-cta-features">
+            <span class="feature-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; color: var(--gold-main);">
+                <rect x="5" y="2" width="14" height="20" rx="3" />
+                <line x1="10" y1="5" x2="14" y2="5" />
+                <circle cx="12" cy="19" r="1" />
+                <path d="M9 11l2 2 4-4" />
+              </svg>
+              100% Phone Verified Profiles
+            </span>
+            <span class="feature-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; color: var(--gold-main);">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="M12 8a2 2 0 0 0-2 2v2h4v-2a2 2 0 0 0-2-2z" />
+                <rect x="9" y="12" width="6" height="5" rx="1" />
+                <circle cx="12" cy="14.5" r="1" fill="currentColor" />
+              </svg>
+              Strict Privacy Controls
+            </span>
+            <span class="feature-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; color: var(--gold-main);">
+                <path d="M12 5.5C10.5 3.5 6 3.5 4 6c-2.5 3 0 7.5 8 13.5 8-6 10.5-10.5 8-13.5-2-2.5-6.5-2.5-8-.5z" />
+              </svg>
+              Highly Compatible Matches
+            </span>
+          </div>
+          <a href="https://www.kalyanmatrimony.com/" target="_blank" class="btn-sidebar-cta">Register Free Now</a>
+        </div>
+
+        <!-- Horoscope Daily Transit Quick Widget -->
+        <div class="sidebar-widget horo-transit-widget">
+          <h4>Daily Auspicious Transit</h4>
+          <div class="transit-box">
+            <div class="transit-header">
+              <span class="transit-day">Today</span>
+              <span class="transit-badge">Shubha Muhurtham</span>
+            </div>
+            <p>Excellent time for engagement agreements, bride-seeing, and gold purchases. Avoid activities between Rahu Kaalam (3:00 PM - 4:30 PM).</p>
+          </div>
+        </div>
+
+        <!-- Auspicious Muhurtham Dates Finder Widget -->
+        <div class="sidebar-widget muhurtham-dates-widget">
+          <h4>Auspicious Muhurtham Calendar</h4>
+          <p>Select a religion to view auspicious dates and daily timings.</p>
+          <div class="muhurtham-filter-wrapper">
+            <select id="muhurtham-religion-select" onchange="updateMuhurthamDates(this.value)">
+              <option value="hindu-tamil">Hindu (Tamil Calendar)</option>
+              <option value="hindu-kerala">Hindu (Malayali Calendar)</option>
+              <option value="hindu-kannada-telugu">Hindu (Kannada & Telugu)</option>
+              <option value="christian">Christian Wedding Seasons</option>
+              <option value="muslim">Muslim Auspicious Months</option>
+            </select>
+          </div>
+          <div class="muhurtham-dates-display" id="muhurtham-dates-container">
+            <!-- Rendered dynamically via JS -->
+          </div>
+        </div>
+
+        <!-- Popular Categories Tags -->
+        <div class="sidebar-widget categories-widget">
+          <h4>Popular Topics</h4>
+          <div class="categories-tag-list">
+            <button class="tag-link" onclick="location.href='index.html#latest-articles'">All Topics</button>
+            <button class="tag-link" onclick="location.href='finding-your-match.html'">Finding Your Match</button>
+            <button class="tag-link" onclick="location.href='compatibility-hub.html'">Compatibility Hub</button>
+            <button class="tag-link" onclick="location.href='success-stories-archive.html'">Success Stories</button>
+            <button class="tag-link" onclick="location.href='family-perspectives.html'">Family Perspectives</button>
+            <button class="tag-link active" onclick="location.href='wedding-traditions.html'">Wedding Traditions</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="footer-kolam-pattern"></div>
+    <div class="footer-container">
+      <div class="footer-top-grid">
+        <div class="footer-info-col">
+          <div class="footer-logo">
+            <span class="logo-title text-light">Kalyan Sutra</span>
+            <span class="logo-subtitle text-light">South India's Wedding Journal</span>
+          </div>
+          <p>Blending contemporary digital matrimonial convenience with sacred traditional South Indian cultural practices. An editorial platform for modern families.</p>
+          <div class="social-links-list">
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" aria-label="Pinterest">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 22s1-2 1.4-3.6c.1-.4-.6-1-.9-2.5-1-4.2 1.8-9 6.5-9 4.3 0 7 3.2 7 7.2 0 5-2.7 8.3-6 8.3-1.2 0-2.3-.7-2-2 .4-1.6 1.1-4.2 1.1-5.6 0-1.3-.7-2.4-2.2-2.4-1.8 0-3.2 1.8-3.2 4.3 0 1.5.5 2.5.5 2.5s-1.8 7.3-2.2 9c0 0-.2.6-.2.1z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h5>Blog Categories</h5>
+          <ul>
+            <li><a href="finding-your-match.html">Finding Your Match</a></li>
+            <li><a href="compatibility-hub.html">Compatibility Hub</a></li>
+            <li><a href="success-stories-archive.html">Success Stories</a></li>
+            <li><a href="family-perspectives.html">Family Perspectives</a></li>
+            <li><a href="wedding-traditions.html">Wedding Traditions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h5>Matrimony Services</h5>
+          <ul>
+            <li><a href="index.html#kalyan-cta">Register Profile</a></li>
+            <li><a href="https://www.kalyanmatrimony.com/" target="_blank">Search Matches</a></li>
+            <li><a href="index.html#horoscope">Vedic Horoscope Matching</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h5>Contact & Trust</h5>
+          <ul>
+            <li><a href="about.html">About Kalyan Sutra</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="editorial.html">Editorial Guidelines</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div class="trust-badges-container">
+          <div class="trust-badge-item">
+            <span class="trust-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="M9 11l2 2 4-4" />
+              </svg>
+            </span>
+            <span class="trust-badge-text">100% Mobile Verified</span>
+          </div>
+          <div class="trust-badge-item">
+            <span class="trust-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+            </span>
+            <span class="trust-badge-text">Privacy and Security</span>
+          </div>
+          <div class="trust-badge-item">
+            <span class="trust-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="7" />
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                <line x1="12" y1="5" x2="12" y2="11" />
+                <line x1="9" y1="8" x2="15" y2="8" />
+              </svg>
+            </span>
+            <span class="trust-badge-text">From the Trusted Brand Kalyan Jewellers</span>
+          </div>
+        </div>
+        <p class="copyright-text">&copy; 2026 Kalyan Matrimony Platform. All Rights Reserved. Designed with cultural love and elegance.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom Javascript -->
+  <script src="index.js"></script>
+</body>
+</html>

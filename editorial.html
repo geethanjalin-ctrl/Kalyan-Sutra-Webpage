@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editorial Guidelines - Kalyan Sutra</title>
+  <meta name="description" content="Read the Editorial Policy of Kalyan Sutra, official blog platform of Kalyan Matrimony.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght=0,300;0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="index.css?v=1.0.1">
+  <!-- Client-side PDF Generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <style>
+    .guide-content {
+      font-family: var(--font-sans);
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--text-secondary);
+    }
+    .guide-content p {
+      margin-bottom: 22px;
+      text-align: left;
+    }
+    .guide-content h2 {
+      font-family: var(--font-sans);
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: var(--maroon-main);
+      margin: 32px 0 16px 0;
+      border-bottom: 0.5px solid var(--border-color);
+      padding-bottom: 6px;
+    }
+    .guide-content h3 {
+      font-family: var(--font-sans);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 24px 0 12px 0;
+    }
+    .guide-content ul {
+      margin-bottom: 22px;
+      padding-left: 20px;
+    }
+    .guide-content li {
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Custom Alert Toast Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Glassmorphism Navigation Bar -->
+  <header class="navbar-header" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo-link">
+        <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Traditional Lamp / Lotus Motif -->
+          <path d="M50 15C50 15 35 38 35 52C35 60.2843 41.7157 67 50 67C58.2843 67 65 60.2843 65 52C65 38 50 15 50 15Z" fill="url(#gold-gradient)" />
+          <path d="M50 8C50 8 31 32 31 50C31 60.4934 39.5066 69 50 69C60.4934 69 69 60.4934 69 50C69 32 50 8 50 8ZM50 64C42.268 64 36 57.732 36 50C36 39.2 46.8 20.4 50 15.2C53.2 20.4 64 39.2 64 50C64 57.732 57.732 64 50 64Z" fill="url(#gold-gradient-2)" />
+          <circle cx="50" cy="80" r="4" fill="#D4AF37" />
+          <path d="M30 80H70" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
+          <path d="M40 85H60" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
+          <defs>
+            <linearGradient id="gold-gradient" x1="35" y1="15" x2="65" y2="67" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#F3E5AB" />
+              <stop offset="50%" stop-color="#D4AF37" />
+              <stop offset="100%" stop-color="#AA7C11" />
+            </linearGradient>
+            <linearGradient id="gold-gradient-2" x1="31" y1="8" x2="69" y2="69" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#FFF" stop-opacity="0.8"/>
+              <stop offset="100%" stop-color="#D4AF37" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-title">Kalyan Sutra</span>
+          <span class="logo-subtitle">South India's Wedding Journal</span>
+        </div>
+      </a>
+
+      <!-- Desktop Menu Links -->
+      <nav class="nav-links">
+        <a href="index.html#hero" class="nav-item">Home</a>
+        <a href="index.html#traditions" class="nav-item">Traditions</a>
+        <a href="index.html#horoscope" class="nav-item">Horoscope Matching</a>
+        <a href="index.html#success-stories" class="nav-item">Success Stories</a>
+        <a href="journals.html" class="nav-item">Journals</a>
+      </nav>
+
+      <!-- Nav actions -->
+      <div class="nav-actions">
+        <!-- Search bar toggle widget -->
+        <div class="search-widget">
+          <button class="search-toggle-btn" aria-label="Search" id="search-toggle">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+          <div class="search-input-container" id="search-box">
+            <input type="text" id="nav-search-input" placeholder="Search articles, customs...">
+          </div>
+        </div>
+
+        <button class="theme-toggle" id="theme-switcher" title="Toggle Theme" style="display: none;">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+          </svg>
+        </button>
+
+        <a href="https://www.kalyanmatrimony.com/" target="_blank" class="btn-subscribe">Find Your Match</a>
+
+        <!-- Mobile menu burger -->
+        <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Menu -->
+    <div class="mobile-nav" id="mobile-menu">
+      <div class="mobile-search-wrapper">
+        <input type="text" id="mobile-search-input" placeholder="Search articles, customs...">
+        <svg class="mobile-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </div>
+      <a href="index.html#hero" class="mobile-nav-item">Home</a>
+      <a href="index.html#traditions" class="mobile-nav-item">Traditions</a>
+      <a href="index.html#horoscope" class="mobile-nav-item">Horoscope Matching</a>
+      <a href="index.html#success-stories" class="mobile-nav-item">Success Stories</a>
+      <a href="journals.html" class="mobile-nav-item">Journals</a>
+      <a href="https://www.kalyanmatrimony.com/" target="_blank" class="mobile-nav-btn">Find Your Match</a>
+    </div>
+  </header>
+
+  <!-- Main Content Layout -->
+  <main class="article-layout-container">
+    <!-- Breadcrumbs -->
+    <nav class="article-breadcrumb animate-fade-in animate-stagger-1">
+      <a href="index.html">Home</a> &gt; <span>Editorial Policy</span>
+    </nav>
+
+    <div style="max-width: 900px; margin: 0 auto;">
+      <div class="article-paper-card animate-fade-in animate-stagger-2" style="padding: 50px 60px;">
+        <h1 class="article-header-title" style="margin-bottom: 10px; font-family: var(--font-sans); font-weight: 700; font-size: 2.2rem; text-align: center; color: var(--maroon-main); letter-spacing: -0.02em;">
+          Editorial Policy
+        </h1>
+        
+        <div class="guide-content">
+          <p style="text-align: center; font-style: italic; color: var(--text-muted); margin-bottom: 35px;">
+            <strong>Last Updated:</strong> June 2026
+          </p>
+
+          <p>At Kalyan Sutra, we believe that meaningful relationships are built on understanding, trust, shared values, and informed choices. Our editorial mission is to create content that helps readers navigate the journey of matrimony, relationships, wedding traditions, and cultural heritage with confidence.</p>
+
+          <h2>Our Editorial Mission</h2>
+          <p>Kalyan Sutra exists to provide thoughtful, reliable, and engaging content that informs, inspires, and supports individuals and families at every stage of their matrimonial journey.</p>
+          <p>Our content is designed to:</p>
+          <ul>
+            <li>Educate readers through informative articles</li>
+            <li>Celebrate South Indian cultural heritage</li>
+            <li>Explore modern relationship perspectives</li>
+            <li>Highlight inspiring success stories</li>
+            <li>Provide practical wedding and matrimony guidance</li>
+          </ul>
+
+          <h2>Accuracy & Reliability</h2>
+          <p>We are committed to maintaining high editorial standards. Our team strives to ensure that information published on Kalyan Sutra is:</p>
+          <ul>
+            <li>Well-researched</li>
+            <li>Factually accurate</li>
+            <li>Relevant to readers</li>
+            <li>Updated when necessary</li>
+          </ul>
+          <p>When discussing cultural traditions or historical practices, we make every effort to present information respectfully and responsibly.</p>
+
+          <h2>Editorial Independence</h2>
+          <p>Kalyan Sutra maintains editorial integrity in all published content. Our articles are developed with the objective of providing value to readers rather than promoting specific viewpoints or communities. We aim to create content that is inclusive, respectful, and accessible to a diverse audience.</p>
+
+          <h2>Inclusivity & Respect</h2>
+          <p>Marriage traditions and relationship journeys differ across cultures, regions, religions, and communities. Kalyan Sutra is committed to representing diverse perspectives while fostering mutual respect and understanding. Content that promotes discrimination, hatred, or exclusion has no place on this platform.</p>
+
+          <h2>Success Stories & Community Content</h2>
+          <p>Success stories featured on Kalyan Sutra may be submitted voluntarily by individuals or shared with permission. Personal information is handled responsibly and published only with appropriate consent.</p>
+
+          <h2>Corrections & Updates</h2>
+          <p>If factual inaccuracies are identified, we will make reasonable efforts to review and correct them promptly. Readers may contact us regarding corrections, clarifications, or content feedback.</p>
+
+          <h2>Our Commitment</h2>
+          <p>Kalyan Sutra is more than a blog. It is a platform dedicated to exploring the stories, traditions, values, and connections that shape meaningful relationships. Through thoughtful storytelling and responsible publishing, we aim to create a trusted destination for readers seeking guidance, inspiration, and perspective on the journey to forever.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="footer-kolam-pattern"></div>
+    <div class="footer-container">
+      <div class="footer-top-grid">
+        <div class="footer-info-col">
+          <div class="footer-logo">
+            <span class="logo-title text-light">Kalyan Sutra</span>
+            <span class="logo-subtitle text-light">South India's Wedding Journal</span>
+          </div>
+          <p>Blending contemporary digital matrimonial convenience with sacred traditional South Indian cultural practices. An editorial platform for modern families.</p>
+          <div class="social-links-list">
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" aria-label="Pinterest">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 22s1-2 1.4-3.6c.1-.4-.6-1-.9-2.5-1-4.2 1.8-9 6.5-9 4.3 0 7 3.2 7 7.2 0 5-2.7 8.3-6 8.3-1.2 0-2.3-.7-2-2 .4-1.6 1.1-4.2 1.1-5.6 0-1.3-.7-2.4-2.2-2.4-1.8 0-3.2 1.8-3.2 4.3 0 1.5.5 2.5.5 2.5s-1.8 7.3-2.2 9c0 0-.2.6-.2.1z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h5>Blog Categories</h5>
+          <ul>
+            <li><a href="finding-your-match.html">Finding Your Match</a></li>
+            <li><a href="compatibility-hub.html">Compatibility Hub</a></li>
+            <li><a href="success-stories-archive.html">Success Stories</a></li>
+            <li><a href="family-perspectives.html">Family Perspectives</a></li>
+            <li><a href="wedding-traditions.html">Wedding Traditions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h5>Matrimony Services</h5>
+          <ul>
+            <li><a href="index.html#kalyan-cta">Register Profile</a></li>
+            <li><a href="https://www.kalyanmatrimony.com/" target="_blank">Search Matches</a></li>
+            <li><a href="index.html#horoscope">Vedic Horoscope Matching</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h5>Contact & Trust</h5>
+          <ul>
+            <li><a href="about.html">About Kalyan Sutra</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="editorial.html">Editorial Guidelines</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div class="trust-badges-container">
+          <div class="trust-badge-item">
+            <span class="trust-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="M9 11l2 2 4-4" />
+              </svg>
+            </span>
+            <span class="trust-badge-text">100% Mobile Verified</span>
+          </div>
+          <div class="trust-badge-item">
+            <span class="trust-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+            </span>
+            <span class="trust-badge-text">Privacy and Security</span>
+          </div>
+          <div class="trust-badge-item">
+            <span class="trust-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="7" />
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                <line x1="12" y1="5" x2="12" y2="11" />
+                <line x1="9" y1="8" x2="15" y2="8" />
+              </svg>
+            </span>
+            <span class="trust-badge-text">From the Trusted Brand Kalyan Jewellers</span>
+          </div>
+        </div>
+        <p class="copyright-text">&copy; 2026 Kalyan Matrimony Platform. All Rights Reserved. Designed with cultural love and elegance.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom Javascript -->
+  <script src="index.js"></script>
+</body>
+</html>

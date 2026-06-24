@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Family Perspectives - Kalyan Sutra</title>
+  <meta name="description" content="Explore articles and perspectives for parents and families navigating the modern matchmaking journey in South India.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="index.css?v=1.0.1">
+</head>
+<body>
+
+  <!-- Custom Alert Toast Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Glassmorphism Navigation Bar -->
+  <header class="navbar-header" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo-link">
+        <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Traditional Lamp / Lotus Motif -->
+          <path d="M50 15C50 15 35 38 35 52C35 60.2843 41.7157 67 50 67C58.2843 67 65 60.2843 65 52C65 38 50 15 50 15Z" fill="url(#gold-gradient)" />
+          <path d="M50 8C50 8 31 32 31 50C31 60.4934 39.5066 69 50 69C60.4934 69 69 60.4934 69 50C69 32 50 8 50 8ZM50 64C42.268 64 36 57.732 36 50C36 39.2 46.8 20.4 50 15.2C53.2 20.4 64 39.2 64 50C64 57.732 57.732 64 50 64Z" fill="url(#gold-gradient-2)" />
+          <circle cx="50" cy="80" r="4" fill="#D4AF37" />
+          <path d="M30 80H70" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
+          <path d="M40 85H60" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
+          <defs>
+            <linearGradient id="gold-gradient" x1="35" y1="15" x2="65" y2="67" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#F3E5AB" />
+              <stop offset="50%" stop-color="#D4AF37" />
+              <stop offset="100%" stop-color="#AA7C11" />
+            </linearGradient>
+            <linearGradient id="gold-gradient-2" x1="31" y1="8" x2="69" y2="69" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#FFF" stop-opacity="0.8"/>
+              <stop offset="100%" stop-color="#D4AF37" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-title">Kalyan Sutra</span>
+          <span class="logo-subtitle">South India's Wedding Journal</span>
+        </div>
+      </a>
+
+      <!-- Desktop Menu Links -->
+      <nav class="nav-links">
+        <a href="index.html#hero" class="nav-item">Home</a>
+        <a href="index.html#traditions" class="nav-item">Traditions</a>
+        <a href="index.html#horoscope" class="nav-item">Horoscope Matching</a>
+        <a href="index.html#success-stories" class="nav-item">Success Stories</a>
+        <a href="journals.html" class="nav-item">Journals</a>
+      </nav>
+
+      <!-- Nav actions -->
+      <div class="nav-actions">
+        <!-- Search bar toggle widget -->
+        <div class="search-widget">
+          <button class="search-toggle-btn" aria-label="Search" id="search-toggle">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+          <div class="search-input-container" id="search-box">
+            <input type="text" id="nav-search-input" placeholder="Search articles, customs...">
+          </div>
+        </div>
+
+        <button class="theme-toggle" id="theme-switcher" title="Toggle Theme" style="display: none;">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+          </svg>
+        </button>
+
+        <a href="https://www.kalyanmatrimony.com/" target="_blank" class="btn-subscribe">Find Your Match</a>
+
+        <!-- Mobile menu burger -->
+        <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Menu -->
+    <div class="mobile-nav" id="mobile-menu">
+      <div class="mobile-search-wrapper">
+        <input type="text" id="mobile-search-input" placeholder="Search articles, customs...">
+        <svg class="mobile-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </div>
+      <a href="index.html#hero" class="mobile-nav-item">Home</a>
+      <a href="index.html#traditions" class="mobile-nav-item">Traditions</a>
+      <a href="index.html#horoscope" class="mobile-nav-item">Horoscope Matching</a>
+      <a href="index.html#success-stories" class="mobile-nav-item">Success Stories</a>
+      <a href="journals.html" class="mobile-nav-item">Journals</a>
+      <a href="https://www.kalyanmatrimony.com/" target="_blank" class="mobile-nav-btn">Find Your Match</a>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <main class="article-layout-container">
+    <!-- Breadcrumbs -->
+    <nav class="article-breadcrumb animate-fade-in animate-stagger-1">
+      <a href="index.html">Home</a> &gt; <a href="journals.html">Categories</a> &gt; <span>Family Perspectives</span>
+    </nav>
+
+    <div class="two-column-layout">
+      <!-- Left Column: Blog List -->
+      <article class="main-content-column">
+        <div class="article-paper-card animate-fade-in animate-stagger-2">
+          <!-- Category Tag -->
+          <span class="article-category-tag animate-fade-in animate-stagger-3">Family Perspectives</span>
+
+          <!-- H1 Header -->
+          <h1 class="article-header-title animate-fade-in animate-stagger-4" style="margin-bottom: 15px;">Explore Family Perspectives</h1>
+          <p class="category-description-lead" style="color: var(--text-secondary); font-size: 1.15rem; line-height: 1.6; margin-bottom: 40px; font-style: italic; border-bottom: 1.5px solid var(--border-color); padding-bottom: 25px;">
+            Helpful insights, guides, and wisdom for parents and families involved in the South Indian matchmaking process.
+          </p>
+
+          <!-- Article Block 1 -->
+          <section class="category-article-block" style="margin-bottom: 50px;">
+            <h2 style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--maroon-main); margin-bottom: 10px; line-height: 1.25;">
+              <a href="parents-guide.html" style="color: inherit; text-decoration: none;" class="hover-underline">1. The Parents' Guide to Modern Matchmaking: Supporting Your Child's Search</a>
+            </h2>
+            <div class="article-meta-row" style="margin-bottom: 20px; font-size: 0.85rem; color: var(--text-muted); padding: 5px 0;">
+              <span>By <strong>Dr. Rajesh Krishnan</strong></span>
+              <span style="margin: 0 8px;">|</span>
+              <span>6 Min Read</span>
+              <span style="margin: 0 8px;">&bull;</span>
+              <span>June 11, 2026</span>
+            </div>
+            <div class="article-inline-image" style="margin: 20px 0;">
+              <img src="inspiration_decor.png" alt="Parents planning and supporting wedding preparations" style="width: 100%; height: auto; border-radius: var(--radius-sm); border: 1px solid var(--gold-main); object-fit: cover; aspect-ratio: 4 / 3;">
+            </div>
+            <div class="article-body-text" style="margin-top: 15px;">
+              <p>For South Indian parents, seeing their children settle into happy marriages is a lifelong aspiration. However, the matchmaking landscape has changed dramatically with modern digital platforms. While parents continue to value background checks, family heritage, and horoscopes, young professionals prioritize personal chemistry, shared values, and career alignment.</p>
+              <p>The most effective role parents can play today is that of supportive facilitators. By establishing a collaborative atmosphere, parents can help filter options based on foundational family values while allowing their children the space to engage in one-on-one communication. This balanced approach reduces pressure and builds mutual trust, ensuring a smoother journey to holy matrimony.</p>
+            </div>
+            <a href="parents-guide.html" class="btn-link" style="display: inline-block; margin-top: 15px; text-transform: uppercase; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.05em; color: var(--gold-main); text-decoration: none;">Read Full Article &rarr;</a>
+          </section>
+
+          <!-- Article Block 2 -->
+          <section class="category-article-block" style="border-top: 1.5px solid var(--border-color); padding-top: 35px; margin-top: 35px; margin-bottom: 50px;">
+            <h2 style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--maroon-main); margin-bottom: 10px; line-height: 1.25;">
+              <a href="bridging-generational-gaps.html" style="color: inherit; text-decoration: none;" class="hover-underline">2. Bridging Generational Gaps: Balancing Traditional Expectations and Modern Choices</a>
+            </h2>
+            <div class="article-meta-row" style="margin-bottom: 20px; font-size: 0.85rem; color: var(--text-muted); padding: 5px 0;">
+              <span>By <strong>R. Vaidehi</strong></span>
+              <span style="margin: 0 8px;">|</span>
+              <span>5 Min Read</span>
+              <span style="margin: 0 8px;">&bull;</span>
+              <span>June 16, 2026</span>
+            </div>
+            <div class="article-inline-image" style="margin: 20px 0;">
+              <img src="inspiration_jewelry.png" alt="Traditional wedding jewelry symbol of heritage" style="width: 100%; height: auto; border-radius: var(--radius-sm); border: 1px solid var(--gold-main); object-fit: cover; aspect-ratio: 4 / 3;">
+            </div>
+            <div class="article-body-text" style="margin-top: 15px;">
+              <p>Generational differences in selecting a life partner can sometimes lead to misunderstandings between children and parents. Traditional expectations often focus heavily on community metrics, whereas modern choices are driven by individual autonomy and compatibility. Bridging this gap requires open, empathetic dialogues within the family.</p>
+              <p>It is important to recognize that both sides seek the same ultimate goal: a stable, loving, and prosperous marriage. By identifying areas of compromise—such as agreeing on horoscope matching while giving the couple sufficient time to know each other—families can navigate the process as a unified front, blending ancient wisdom with contemporary realities.</p>
+            </div>
+            <a href="bridging-generational-gaps.html" class="btn-link" style="display: inline-block; margin-top: 15px; text-transform: uppercase; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.05em; color: var(--gold-main); text-decoration: none;">Read Full Article &rarr;</a>
+          </section>
+
+          <!-- Article Block 3 -->
+          <section class="category-article-block" style="border-top: 1.5px solid var(--border-color); padding-top: 35px; margin-top: 35px;">
+            <h2 style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--maroon-main); margin-bottom: 10px; line-height: 1.25;">
+              <a href="role-of-family.html" style="color: inherit; text-decoration: none;" class="hover-underline">3. The Role of Family in South Indian Matrimony: A Celebration of Community</a>
+            </h2>
+            <div class="article-meta-row" style="margin-bottom: 20px; font-size: 0.85rem; color: var(--text-muted); padding: 5px 0;">
+              <span>By <strong>N. Geethanjali</strong></span>
+              <span style="margin: 0 8px;">|</span>
+              <span>7 Min Read</span>
+              <span style="margin: 0 8px;">&bull;</span>
+              <span>June 21, 2026</span>
+            </div>
+            <div class="article-inline-image" style="margin: 20px 0;">
+              <img src="hero_couple.png" alt="Family values in marriage" style="width: 100%; height: auto; border-radius: var(--radius-sm); border: 1px solid var(--gold-main); object-fit: cover; aspect-ratio: 4 / 3;">
+            </div>
+            <div class="article-body-text" style="margin-top: 15px;">
+              <p>In South India, a marriage is not merely the union of two individuals; it is the coming together of two families and communities. The extensive participation of uncles, aunts, grandparents, and cousins in wedding planning and rituals forms a robust support system that surrounds the new couple with care and stability.</p>
+              <p>From organizing pre-wedding ceremonies like Nandi Puja and Nichayathartham to managing post-wedding welcoming rituals, the family structure provides essential guidance. This communal involvement helps ground the relationship, ensuring that the couple can rely on the accumulated wisdom of their elders as they embark on their joint path in life.</p>
+            </div>
+            <a href="role-of-family.html" class="btn-link" style="display: inline-block; margin-top: 15px; text-transform: uppercase; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.05em; color: var(--gold-main); text-decoration: none;">Read Full Article &rarr;</a>
+          </section>
+        </div>
+      </article>
+
+      <!-- Right Column: Sidebar -->
+      <aside class="sidebar-column">
+        <!-- Live Interactive Checklist Widget -->
+        <div class="sidebar-widget checklist-widget">
+          <h4>Your Wedding Planning Tracker</h4>
+          <p>Cross off key tasks to track your wedding preparation progress.</p>
+          
+          <div class="checklist-image-wrapper">
+            <img id="checklist-category-image" src="inspiration_decor.png" alt="Marriage checklist representation" class="checklist-category-image">
+          </div>
+
+          <div class="checklist-selector-wrapper">
+            <select id="checklist-category-select" onchange="switchChecklistCategory(this.value)">
+              <option value="marriage">Marriage Checklist (General)</option>
+              <option value="bride">Bride's Checklist</option>
+              <option value="groom">Groom's Checklist</option>
+            </select>
+          </div>
+
+          <div class="progress-container">
+            <div class="progress-bar" id="checklist-progress" style="width: 20%;"></div>
+          </div>
+          <span class="progress-text" id="checklist-progress-text">2 of 10 tasks completed</span>
+          
+          <ul class="checklist-items" id="checklist-items-list">
+            <!-- Rendered dynamically via JS -->
+          </ul>
+          <button class="btn-sidebar-download" onclick="downloadChecklist()">Download Full Checklist PDF</button>
+        </div>
+
+        <!-- Kalyan Matrimony Sidebar CTA Widget -->
+        <div class="sidebar-widget kalyan-sidebar-cta-widget">
+          <h4>Find Your Match</h4>
+          <p>Join India's most trusted South Indian matchmaking service from Kalyan Jewellers.</p>
+          <div class="sidebar-cta-features">
+            <span class="feature-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; color: var(--gold-main);">
+                <rect x="5" y="2" width="14" height="20" rx="3" />
+                <line x1="10" y1="5" x2="14" y2="5" />
+                <circle cx="12" cy="19" r="1" />
+                <path d="M9 11l2 2 4-4" />
+              </svg>
+              100% Phone Verified Profiles
+            </span>
+            <span class="feature-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; color: var(--gold-main);">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="M12 8a2 2 0 0 0-2 2v2h4v-2a2 2 0 0 0-2-2z" />
+                <rect x="9" y="12" width="6" height="5" rx="1" />
+                <circle cx="12" cy="14.5" r="1" fill="currentColor" />
+              </svg>
+              Strict Privacy Controls
+            </span>
+            <span class="feature-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; color: var(--gold-main);">
+                <path d="M12 5.5C10.5 3.5 6 3.5 4 6c-2.5 3 0 7.5 8 13.5 8-6 10.5-10.5 8-13.5-2-2.5-6.5-2.5-8-.5z" />
+              </svg>
+              Highly Compatible Matches
+            </span>
+          </div>
+          <a href="https://www.kalyanmatrimony.com/" target="_blank" class="btn-sidebar-cta">Register Free Now</a>
+        </div>
+
+        <!-- Auspicious Muhurtham Dates Finder Widget -->
+        <div class="sidebar-widget muhurtham-dates-widget">
+          <h4>Auspicious Muhurtham Calendar</h4>
+          <p>Select a religion to view auspicious dates and daily timings.</p>
+          <div class="muhurtham-filter-wrapper">
+            <select id="muhurtham-religion-select" onchange="updateMuhurthamDates(this.value)">
+              <option value="hindu-tamil">Hindu (Tamil Calendar)</option>
+              <option value="hindu-kerala">Hindu (Malayali Calendar)</option>
+              <option value="hindu-kannada-telugu">Hindu (Kannada & Telugu)</option>
+              <option value="christian">Christian Wedding Seasons</option>
+              <option value="muslim">Muslim Auspicious Months</option>
+            </select>
+          </div>
+          <div class="muhurtham-dates-display" id="muhurtham-dates-container">
+            <!-- Rendered dynamically via JS -->
+          </div>
+        </div>
+
+        <!-- Popular Categories Tags -->
+        <div class="sidebar-widget categories-widget">
+          <h4>Popular Topics</h4>
+          <div class="categories-tag-list">
+            <button class="tag-link" onclick="location.href='index.html#latest-articles'">All Topics</button>
+            <button class="tag-link" onclick="location.href='finding-your-match.html'">Finding Your Match</button>
+            <button class="tag-link" onclick="location.href='compatibility-hub.html'">Compatibility Hub</button>
+            <button class="tag-link" onclick="location.href='success-stories-archive.html'">Success Stories</button>
+            <button class="tag-link active" onclick="location.href='family-perspectives.html'">Family Perspectives</button>
+            <button class="tag-link" onclick="location.href='wedding-traditions.html'">Wedding Traditions</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="footer-kolam-pattern"></div>
+    <div class="footer-container">
+      <div class="footer-top-grid">
+        <div class="footer-info-col">
+          <div class="footer-logo">
+            <span class="logo-title text-light">Kalyan Sutra</span>
+            <span class="logo-subtitle text-light">South India's Wedding Journal</span>
+          </div>
+          <p>Blending contemporary digital matrimonial convenience with sacred traditional South Indian cultural practices. An editorial platform for modern families.</p>
+          <div class="social-links-list">
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" aria-label="Pinterest">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 22s1-2 1.4-3.6c.1-.4-.6-1-.9-2.5-1-4.2 1.8-9 6.5-9 4.3 0 7 3.2 7 7.2 0 5-2.7 8.3-6 8.3-1.2 0-2.3-.7-2-2 .4-1.6 1.1-4.2 1.1-5.6 0-1.3-.7-2.4-2.2-2.4-1.8 0-3.2 1.8-3.2 4.3 0 1.5.5 2.5.5 2.5s-1.8 7.3-2.2 9c0 0-.2.6-.2.1z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h5>Blog Categories</h5>
+          <ul>
+            <li><a href="finding-your-match.html">Finding Your Match</a></li>
+            <li><a href="compatibility-hub.html">Compatibility Hub</a></li>
+            <li><a href="success-stories-archive.html">Success Stories</a></li>
+            <li><a href="family-perspectives.html">Family Perspectives</a></li>
+            <li><a href="wedding-traditions.html">Wedding Traditions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h5>Matrimony Services</h5>
+          <ul>
+            <li><a href="index.html#kalyan-cta">Register Profile</a></li>
+            <li><a href="https://www.kalyanmatrimony.com/" target="_blank">Search Matches</a></li>
+            <li><a href="index.html#horoscope">Vedic Horoscope Matching</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h5>Contact & Trust</h5>
+          <ul>
+            <li><a href="about.html">About Kalyan Sutra</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="editorial.html">Editorial Guidelines</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div class="trust-badges-container">
+          <div class="trust-badge-item">
+            <span class="trust-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="M9 11l2 2 4-4" />
+              </svg>
+            </span>
+            <span class="trust-badge-text">100% Mobile Verified</span>
+          </div>
+          <div class="trust-badge-item">
+            <span class="trust-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+            </span>
+            <span class="trust-badge-text">Privacy and Security</span>
+          </div>
+          <div class="trust-badge-item">
+            <span class="trust-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="7" />
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                <line x1="12" y1="5" x2="12" y2="11" />
+                <line x1="9" y1="8" x2="15" y2="8" />
+              </svg>
+            </span>
+            <span class="trust-badge-text">From the Trusted Brand Kalyan Jewellers</span>
+          </div>
+        </div>
+        <p class="copyright-text">&copy; 2026 Kalyan Matrimony Platform. All Rights Reserved. Designed with cultural love and elegance.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom Javascript -->
+  <script src="index.js"></script>
+</body>
+</html>
